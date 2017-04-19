@@ -8,7 +8,7 @@ class ProsteerTask extends Task {
     public function mainAction()
     {
         echo "Import CSV\n";
-        $this-import();
+        $this->import();
         echo "items code calc\n";
         $this->updatecode();
     }

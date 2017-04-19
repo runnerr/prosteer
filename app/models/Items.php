@@ -24,6 +24,13 @@ class Items extends \Phalcon\Mvc\Model
      * @var integer
      * @Column(type="integer", length=11, nullable=false)
      */
+    public $item_nr;
+
+    /**
+     *
+     * @var integer
+     * @Column(type="integer", length=11, nullable=false)
+     */
     public $site_id;
 
     /**

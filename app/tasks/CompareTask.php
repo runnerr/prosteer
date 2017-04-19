@@ -6,8 +6,12 @@ class CompareTask extends Task {
 
     public function mainAction()
     {
+        echo "compare gtest\n";
         $this->compareSite(2);
+        echo "compare rcs\n";
         $this->compareSite(3);
+        echo "done!\n";
+
     }
 
     private function compareSite($site_id)

@@ -7,13 +7,13 @@ class GtestTask extends Task {
     public function mainAction()
     {
         echo "Reset data\n";
-        $this-reset();
+        $this->reset();
         echo "Import sitemap\n";
-        $this-sitemap();
+        $this->sitemap();
         echo "Downdload htmls\n";
-        $this-gethtml();
+        $this->gethtml();
         echo "Parse html\n";
-        $this-parse();
+        $this->parse();
         echo "Update data\n";
         $this->update();
     }
@@ -30,6 +30,8 @@ class GtestTask extends Task {
                 unlink($file);
             }
         }
+        $items = Items::findBysite_id(2);
+        $items->delete();
     }
 
     private function sitemap()
@@ -46,7 +48,7 @@ class GtestTask extends Task {
 
     private function gethtml()
     {
-        $urls = file(dirname($this->config->gtest->priceUrls));
+        $urls = file($this->config->gtest->priceUrls);
         if (!file_exists($this->config->gtest->htmlsDir)) {
             mkdir($this->config->gtest->htmlsDir);
         }
@@ -104,10 +106,10 @@ class GtestTask extends Task {
         $lines = file($this->config->gtest->priceList);
         foreach ($lines as $line) {
             echo $line."\n";
-            list($product_id, $name, $url, $price) = explode("\t", $line);
-            echo "$product_id, $name, $url, $price\n";
+            list($item_nr, $name, $url, $price) = explode("\t", $line);
+            echo "$item_nr, $name, $url, $price\n";
             $item = new Items();
-            $item->product_id = $product_id;
+            $item->item_nr = $item_nr;
             $item->site_id = $site->id;
             $item->name = $name;
             $item->url = $url;
