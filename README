@@ -1,0 +1,10 @@
+Price comparison
+
+Installed Phalcon framework required
+
+Command line interface:
+
+>php app/cli.php gtest
+>php app/cli.php rcs
+>php app/cli.php prosteer
+>php app/cli.php compare

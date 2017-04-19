@@ -1,2 +1,49 @@
-/cache/
-/config/development/
+# Files
+composer.phar
+vendor/
+logs/
+src/css
+app/cache
+app/export
+app/logs
+import
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+# vim
+*.vi
+*~
+*.lock
+*.out
+
+
+# OS or Editor folders
+[Tt]humbs.db
+*.DS_Store
+.AppleDouble
+.LSOverride
+nbproject
+.cache
+.project
+.settings
+.tmproj
+.idea
+*.esproj
+*.sublime-project
+*.sublime-workspace
+
+# other CVS systems
+.hg
+.svn
+.CVS
+
+# Frontend specific things
+*.sass-cache
+node_modules/**/*
+
