@@ -21,7 +21,7 @@ class ProsteerTask extends Task {
 
         $lines = file($this->config->prosteer->masteramCsv);
         foreach ($lines as $line) {
-            list($product_id, $brand, $model, $title, $site2, $status, $status2, $price, $price2) = explode("\t", $line);
+            list($product_id, $brand, $model, $title, $site2, $status, $status2, $price, $price2) = explode("\t", $line . "\t\t\t\t\t\t", 9);
             if ($product_id>0) {
                 $code = $model;
                 $code2 = '';

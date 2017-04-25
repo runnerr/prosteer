@@ -27,7 +27,7 @@ return new \Phalcon\Config([
         'sitemapFile'   => APP_PATH . '/app/cache/prosteer_sitemap.xml',
         'priceUrls'     => APP_PATH . '/app/cache/prosteer_urls.txt',
         'priceList'     => APP_PATH . '/app/cache/prosteer_price.csv',
-        'masteramCsv'   => APP_PATH . '/import/MasteramPriceList_UA_uk.csv',
+        'masteramCsv'   => 'http://138.68.74.79/masteram.csv',
     ],
     'gtest' => [
         'sitemapUrl'    => 'http://gtest.com.ua/index.php?route=feed/google_sitemap',
